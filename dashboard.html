@@ -5,27 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoPoints - Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Your EcoPoints Dashboard 🌍</h1>
+    <div class="container dashboard">
+        <h1>Your EcoPoints Dashboard</h1>
         <p>Hello, <span id="dashboardUserName"></span>! Keep up the great work!</p>
         <div class="score-display">
-            Your EcoPoints: <span id="ecoPointsDisplay">0</span> 🌳
+            <div class="points-value"><span id="ecoPointsDisplay">0</span> Points</div>
+            <div class="points-label">Total EcoPoints Earned</div>
         </div>
 
-        <h2>Earn EcoPoints!</h2>
+        <h2>Log Your Eco-Friendly Actions</h2>
         <div class="eco-actions">
-            <button class="btn eco-action-btn" data-points="10">🚶‍♀️ Use Public Transport</button>
-            <button class="btn eco-action-btn" data-points="5">♻️ Recycle Waste</button>
-            <button class="btn eco-action-btn" data-points="20">🌲 Plant a Tree</button>
-            <button class="btn eco-action-btn" data-points="8">💡 Save Energy</button>
-            <button class="btn eco-action-btn" data-points="12">💧 Conserve Water</button>
+            <button class="btn eco-action-btn" data-points="10" data-action="public_transport">
+                <span class="icon">🚌</span>
+                <span class="label">Public Transport</span>
+                <span class="points">+10 pts</span>
+            </button>
+            <button class="btn eco-action-btn" data-points="5" data-action="recycle">
+                <span class="icon">♻️</span>
+                <span class="label">Recycle Waste</span>
+                <span class="points">+5 pts</span>
+            </button>
+            <button class="btn eco-action-btn" data-points="20" data-action="plant_tree">
+                <span class="icon">🌳</span>
+                <span class="label">Plant a Tree</span>
+                <span class="points">+20 pts</span>
+            </button>
+            <button class="btn eco-action-btn" data-points="8" data-action="save_energy">
+                <span class="icon">💡</span>
+                <span class="label">Save Energy</span>
+                <span class="points">+8 pts</span>
+            </button>
+            <button class="btn eco-action-btn" data-points="12" data-action="conserve_water">
+                <span class="icon">💧</span>
+                <span class="label">Conserve Water</span>
+                <span class="points">+12 pts</span>
+            </button>
+            <button class="btn eco-action-btn" data-points="15" data-action="bike">
+                <span class="icon">🚴</span>
+                <span class="label">Bike to Work</span>
+                <span class="points">+15 pts</span>
+            </button>
+        </div>
+
+        <div class="stats-section">
+            <h2>Your Activity History</h2>
+            <div id="activityHistory" class="activity-history">
+                <p class="empty-state">No activities logged yet. Start earning points!</p>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <h2>Your Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalActions">0</div>
+                    <div class="stat-label">Total Actions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="todayActions">0</div>
+                    <div class="stat-label">Today's Actions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="thisWeekActions">0</div>
+                    <div class="stat-label">This Week</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="favoriteAction">-</div>
+                    <div class="stat-label">Favorite Action</div>
+                </div>
+            </div>
         </div>
 
         <button id="logoutBtn" class="btn logout-btn">Logout</button>
-        <div id="rewardNotification" class="reward-notification"></div>
+        <div id="notification" class="notification"></div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
