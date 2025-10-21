@@ -1,0 +1,189 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f5e9; /* Light green background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+h1 {
+    color: #2e7d32; /* Darker green for headings */
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #4caf50; /* Green for labels */
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: 1px solid #a5d6a7; /* Light green border */
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #4caf50; /* Darker green on focus */
+    outline: none;
+}
+
+.btn {
+    background-color: #4caf50; /* Green button */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #388e3c; /* Darker green on hover */
+    transform: translateY(-2px);
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 0.95em;
+}
+
+.message a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.message a:hover {
+    text-decoration: underline;
+}
+
+.message.error {
+    color: #d32f2f; /* Red for error messages */
+    font-weight: bold;
+}
+
+.message.success {
+    color: #388e3c; /* Green for success messages */
+    font-weight: bold;
+}
+
+/* Dashboard Specific Styles */
+.score-display {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #2e7d32;
+    margin: 30px 0;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-radius: 10px;
+    border: 2px solid #a5d6a7;
+}
+
+.eco-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.eco-action-btn {
+    background-color: #66bb6a; /* Lighter green for action buttons */
+    padding: 15px 10px;
+    font-size: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.eco-action-btn:hover {
+    background-color: #43a047;
+}
+
+.logout-btn {
+    background-color: #ef5350; /* Red for logout button */
+}
+
+.logout-btn:hover {
+    background-color: #c62828;
+}
+
+.reward-notification {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #fff9c4; /* Light yellow for notifications */
+    border: 1px solid #ffeb3b;
+    border-radius: 8px;
+    color: #fbc02d;
+    font-weight: bold;
+    display: none; /* Hidden by default */
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+        margin: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .eco-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .score-display {
+        font-size: 1.8em;
+    }
+}

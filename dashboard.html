@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPoints - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your EcoPoints Dashboard 🌍</h1>
+        <p>Hello, <span id="dashboardUserName"></span>! Keep up the great work!</p>
+        <div class="score-display">
+            Your EcoPoints: <span id="ecoPointsDisplay">0</span> 🌳
+        </div>
+
+        <h2>Earn EcoPoints!</h2>
+        <div class="eco-actions">
+            <button class="btn eco-action-btn" data-points="10">🚶‍♀️ Use Public Transport</button>
+            <button class="btn eco-action-btn" data-points="5">♻️ Recycle Waste</button>
+            <button class="btn eco-action-btn" data-points="20">🌲 Plant a Tree</button>
+            <button class="btn eco-action-btn" data-points="8">💡 Save Energy</button>
+            <button class="btn eco-action-btn" data-points="12">💧 Conserve Water</button>
+        </div>
+
+        <button id="logoutBtn" class="btn logout-btn">Logout</button>
+        <div id="rewardNotification" class="reward-notification"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
